@@ -5,9 +5,19 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        treeSetDemo();
 
+        Map<String, Contact> map = new HashMap<>();
+        map.put("Moe", new Contact("Moe", "green", "0503453434"));//android Sharepref, Bundle, Intent (Bundle)
+
+        Map<String, Contact> tree = new TreeMap<>();
+        tree.put("A", new Contact("Dave", "D", "D"));
+        tree.put("C", new Contact("Aba", "D", "D"));
+        tree.put("B", new Contact("Gil", "D", "D"));
+
+        for (String s : tree.keySet()){
+            System.out.println(s);
+            System.out.println(tree.get(s));
+        }
     }
     public static void treeSetDemo(){
 
